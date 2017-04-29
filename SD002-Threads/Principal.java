@@ -13,7 +13,7 @@ public class Principal{
 		}
 		int contaTrinta=0;
 		while(txt.getIsUpper()==false){
-			for(i=29;  i>0; i--){
+			for(i=29;  i>0 && txt.getIsUpper()==false; i--){
 			      try{
 				listadets.get(i).start(); 
 			      }catch(Exception e){//caso as threads já tenham sido iniciadas, instancia se 30 novas threads 
