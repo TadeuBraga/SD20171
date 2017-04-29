@@ -7,8 +7,10 @@ public class Modelo implements Runnable {
 	this.t=t;
 	
 }
-    public void run(){
+    public synchronized void run(){
        System.out.println("Eu sou a thread: "+identificador);
-       System.out.println(t.append(""+identificador));
+       System.out.println(t.getTxt());
+	t.changeFirstLower();
+	
     }
   }
